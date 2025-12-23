@@ -1,0 +1,161 @@
+---
+---
+
+@import "{{ site.theme }}";
+.dialogue {
+  margin-bottom: 1rem; // Matches Primer's spacing scale
+  text-indent: 1rem; // Tab-like indent for dialogue
+  font-size: var(--base-text-size, 16px); // Inherit Primer's base font size
+  line-height: var(--base-line-height, 1.5); // Inherit Primer's line height
+  color: var(--base-color, #24292e); // Inherit Primer's text color
+}
+.dialogue .speaker {
+  font-weight: 550; // Matches Primer's bold weight
+  font-variant: small-caps; /* Use small capitals for speaker names */
+  color: var(--color-text-primary, #24292e); // Primer's primary text color
+
+  // Ensure colon after speaker is visually distinct
+  &::after {
+    content: ": ";
+    margin-right: 0.25rem; // Small spacing after colon
+  }
+}
+.llm-param-form {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.llm-param-form .form-row { /* New class for each label-input pair row */
+  display: flex;
+  align-items: center; /* Vertically align items in the middle */
+  margin-bottom: 10px; /* Space between rows */
+}
+.llm-param-form label {
+  font-weight: bold;
+  margin-right: 10px; /* Space between label and input */
+  min-width: 250px;
+  text-align: right; /* Optional: align label text to the right */
+}
+.llm-param-form input[type="text"],
+.llm-param-form input[type="number"],
+.llm-param-form select {
+  width: 100%; /* Input will take remaining space within its flex container */
+  max-width: 400px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.styled-link-button {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-top: 20px; /* This can be adjusted or moved to a wrapper div if needed */
+  background-color: #007bff;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  text-align: center;
+  border: none;
+}
+.styled-link-button:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
+.form-button-row {
+  text-align: center; /* This centers inline and inline-block children */
+  //margin-top: 5px; /* Add some space above the button */
+}
+.styled-link-button {
+  display: inline-block; // Ensure it's inline-block or block for text-align: center to work
+}
+
+#dialogue-content-wrapper {
+  padding-bottom: 20px;
+  // The 'display' property is managed dynamically by action.js
+}
+
+#dialogue-editor-textarea { // Ensure this ID is added to the textarea in action.js
+  width: 100%;
+  min-height: 830px;
+  // The 'display' property is managed dynamically by action.js
+  border: 1px solid lightgrey !important;
+  padding: 10px;
+  box-sizing: border-box; // Added for better layout consistency
+}
+
+#file-picker-container {
+  width: 100%;
+  min-height: 830px;
+  // The 'display' property is managed dynamically by action.js (switches between 'none' and 'flex')
+  // These styles apply when display is 'flex':
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box; // Added for better layout consistency
+}
+
+#chooseFileButton {
+  // Assumes .btn and .btn-primary (from Primer) are already applied via className in JS.
+  // These styles will augment or override Primer's default styles for this specific button.
+  padding: 10px 20px;
+  font-size: 1.0rem;
+  background: #ffffff;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 1px;
+}
+
+.popup {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.popup h3 {
+  margin-top: 0;
+  font-size: 1.25em;
+}
+
+.popup input[type="text"] {
+  width: 95%;
+  margin: 0 auto 10px auto;
+  display: block;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  font-size: 1em;
+}
+
+.popup button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.popup button:hover {
+  background: #0056b3;
+}
