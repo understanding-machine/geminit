@@ -1,1 +1,1 @@
-### Thingking Machine (geminit)
+### Understanding Machine (geminit)

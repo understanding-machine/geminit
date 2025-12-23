@@ -6,16 +6,16 @@ relative_links:
 include:
   - README.md
   - LICENSE.md
-url: https://thingking-machine.github.io
+url: https://understanding-machine.github.io
 baseurl: /geminit
 
-title: Thingking Machine
-description: This is a machine that reasons.
+title: Understanding Machine
+description: This is a machine that understands.
 
 machine:
-  name: Thingking-Machine
-  verb: Thingking
-  instructions_file: geminit_thingking.md
+  name: Understanding-Machine
+  verb: Understanding
+  instructions_file: geminit_understanding.md
   token: gemini_paid
   server: https://localhost:443
   apiUrl: https://generativelanguage.googleapis.com/v1beta/models/
@@ -35,8 +35,8 @@ lm:
 
 
 github_settings:
-  owner: thingking-machine
-  repo: thingking_machine
+  owner: understanding-machine
+  repo: understanding_machine
   file_name: machina.yaml
   branch: main
   token_file: github.txt
