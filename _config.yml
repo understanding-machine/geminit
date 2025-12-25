@@ -15,7 +15,7 @@ description: This is a machine that understands.
 machine:
   name: Understanding-Machine
   verb: Understanding
-  instructions_file: geminit_understanding.md
+  instructions_file: understanding_geminit.md
   token: gemini_paid
   server: https://localhost:443
   apiUrl: https://generativelanguage.googleapis.com/v1beta/models/
